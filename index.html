@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Website mẫu giới thiệu Trường THPT Phú Nhuận dành cho học sinh thực hành HTML, CSS và JavaScript." />
-  <title>THPT Phú Nhuận | Website mẫu</title>
+  <meta name="description" content="Website one-page giới thiệu Trường THPT Phú Nhuận với hiệu ứng cuộn và animation." />
+  <title>THPT Phú Nhuận | One-page experience</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,226 +13,192 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Trang chủ">
+      <a class="brand" href="#home" aria-label="Trang chủ">
         <span class="brand-mark">PN</span>
-        <span>
-          <strong>THPT PHÚ NHUẬN</strong>
-          <small>Website học tập mẫu</small>
-        </span>
+        <span><strong>THPT PHÚ NHUẬN</strong><small>One-page school experience</small></span>
       </a>
-
-      <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false">☰</button>
-
-      <nav id="mainNav" class="main-nav" aria-label="Điều hướng chính">
-        <a href="index.html">Trang chủ</a>
-        <a href="gioi-thieu.html">Giới thiệu</a>
-        <a href="hoat-dong.html">Hoạt động</a>
-        <a href="thanh-tich.html">Thành tích</a>
-        <a href="lien-he.html">Liên hệ</a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#activities">Hoạt động</a>
+        <a href="#achievements">Thành tích</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Liên hệ</a>
       </nav>
+      <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-      <span class="hero-orb orb-1"></span>
-      <span class="hero-orb orb-2"></span>
-      <span class="hero-orb orb-3"></span>
-      <div class="container hero-content">
-        <p class="eyebrow">WELCOME TO PHU NHUAN HIGH SCHOOL</p>
-        <h1>Thanh xuân đợi tôi<br />ở Phú Nhuận</h1>
-        <p class="hero-text">
-          Một website mẫu để học sinh thực hành xây dựng sản phẩm số,
-          trình bày thông tin và triển khai website bằng GitHub Pages.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#about">Khám phá</a>
-          <a class="btn btn-secondary" href="#student-task">Bài tập cho học sinh</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container two-col">
-        <div>
-          <p class="section-kicker">VỀ NHÀ TRƯỜNG</p>
-          <h2>Một môi trường học tập năng động và giàu bản sắc</h2>
-          <p>
-            Trường THPT Phú Nhuận là môi trường giáo dục nơi học sinh được
-            khuyến khích phát triển kiến thức, kỹ năng, tinh thần trách nhiệm
-            và khả năng sáng tạo.
+    <section class="panel hero" id="home" data-section="Trang chủ">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-up">WELCOME TO PHU NHUAN HIGH SCHOOL</p>
+          <h1 class="hero-title">
+            <span class="line-mask"><span>Thanh xuân</span></span>
+            <span class="line-mask"><span>đợi tôi ở</span></span>
+            <span class="line-mask accent-line"><span>Phú Nhuận.</span></span>
+          </h1>
+          <p class="hero-text reveal-up delay-2">
+            Một trải nghiệm web dạng trình chiếu: mỗi lần cuộn là một chương mới.
           </p>
-          <p>
-            Nội dung tại website này được thiết kế dưới dạng <strong>mẫu thực hành</strong>.
-            Học sinh có thể thay thế văn bản, hình ảnh, màu sắc và các thành phần
-            để tạo ra website riêng của nhóm.
-          </p>
+          <div class="hero-actions reveal-up delay-3">
+            <a class="btn btn-primary" href="#about">Bắt đầu khám phá</a>
+            <span class="scroll-hint">Cuộn để xem ↓</span>
+          </div>
         </div>
 
-        <div class="info-card">
-          <div class="stat">
-            <span class="stat-number counter" data-count="1" data-pad="2">00</span>
-            <span>Website mẫu</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number counter" data-count="3" data-pad="2">00</span>
-            <span>Công nghệ: HTML · CSS · JS</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number counter" data-count="100" data-suffix="%">0%</span>
-            <span>Chạy trực tiếp trên trình duyệt</span>
-          </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="orbit orbit-c"></div>
+          <div class="glass-card card-a">Học tập</div>
+          <div class="glass-card card-b">Sáng tạo</div>
+          <div class="glass-card card-c">Kết nối</div>
+          <div class="hero-number">01</div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="highlights">
-      <div class="container">
-        <p class="section-kicker">ĐIỂM NỔI BẬT</p>
-        <h2 class="section-title">Học tập – Sáng tạo – Kết nối</h2>
-
-        <div class="card-grid">
-          <article class="feature-card">
-            <div class="icon">📘</div>
-            <h3>Học tập</h3>
-            <p>Xây dựng nền tảng kiến thức và kỹ năng học tập chủ động.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="icon">💡</div>
-            <h3>Sáng tạo</h3>
-            <p>Khuyến khích học sinh tạo sản phẩm số và thể hiện ý tưởng cá nhân.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="icon">🤝</div>
-            <h3>Kết nối</h3>
-            <p>Phát triển tinh thần hợp tác qua các hoạt động học tập và dự án nhóm.</p>
-          </article>
+    <section class="panel about-panel" id="about" data-section="Giới thiệu">
+      <div class="container split-stage">
+        <div class="stage-index">02</div>
+        <div class="sticky-title reveal-left">
+          <p class="eyebrow dark">GIỚI THIỆU</p>
+          <h2>Một môi trường học tập năng động và giàu bản sắc.</h2>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="activities">
-      <div class="container">
-        <p class="section-kicker">HOẠT ĐỘNG</p>
-        <h2 class="section-title">Một ngày ở Phú Nhuận</h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
+        <div class="story-stack">
+          <article class="story-card reveal-right">
             <span>01</span>
-            <div>
-              <h3>Học tập trên lớp</h3>
-              <p>Khám phá kiến thức qua bài học, thực hành và các nhiệm vụ học tập.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
+            <h3>Kiến thức</h3>
+            <p>Xây dựng nền tảng học tập vững vàng, khuyến khích tư duy độc lập và tinh thần tự học.</p>
+          </article>
+          <article class="story-card reveal-right">
             <span>02</span>
-            <div>
-              <h3>Câu lạc bộ và ngoại khóa</h3>
-              <p>Mở rộng trải nghiệm thông qua thể thao, nghệ thuật, công nghệ và hoạt động cộng đồng.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
+            <h3>Kỹ năng</h3>
+            <p>Phát triển khả năng hợp tác, trình bày, giải quyết vấn đề và sử dụng công nghệ hiệu quả.</p>
+          </article>
+          <article class="story-card reveal-right">
             <span>03</span>
-            <div>
-              <h3>Dự án học sinh</h3>
-              <p>Tạo website, thuyết trình, sản phẩm truyền thông và các dự án liên môn.</p>
-            </div>
-          </div>
+            <h3>Trải nghiệm</h3>
+            <p>Tạo cơ hội để học sinh tham gia dự án, câu lạc bộ, hoạt động ngoại khóa và sản phẩm số.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="gallery">
+    <section class="panel activities-panel" id="activities" data-section="Hoạt động">
       <div class="container">
-        <p class="section-kicker light">THƯ VIỆN</p>
-        <h2 class="section-title light">Không gian dành cho hình ảnh của bạn</h2>
-        <p class="gallery-note">
-          Các khung bên dưới đang dùng nền minh họa. Học sinh có thể thay bằng ảnh trường,
-          hoạt động lớp hoặc sản phẩm của nhóm.
-        </p>
-
-        <div class="gallery-grid">
-          <div class="gallery-box"><span>Ảnh trường</span></div>
-          <div class="gallery-box"><span>Hoạt động học tập</span></div>
-          <div class="gallery-box"><span>Câu lạc bộ</span></div>
-          <div class="gallery-box"><span>Sự kiện</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section video-section" id="video">
-      <div class="container">
-        <p class="section-kicker">VIDEO GIỚI THIỆU</p>
-        <h2 class="section-title">Kể câu chuyện bằng hình ảnh chuyển động</h2>
-        <div class="video-layout">
-          <div class="video-shell">
-            <video id="schoolVideo" controls muted playsinline preload="metadata">
-              <source src="videos/school.mp4" type="video/mp4">
-              Trình duyệt của bạn không hỗ trợ video HTML5.
-            </video>
-            <div class="video-placeholder" id="videoPlaceholder">
-              <div class="play-mark">▶</div>
-              <strong>Chưa có video school.mp4</strong>
-              <span>Upload video vào thư mục <code>videos/</code> để phát trực tiếp trên GitHub Pages.</span>
-            </div>
+        <div class="section-head reveal-up">
+          <div>
+            <p class="eyebrow light">HOẠT ĐỘNG</p>
+            <h2>Mỗi trải nghiệm là một khung hình.</h2>
           </div>
-          <div class="video-copy">
-            <h3>Học sinh có thể thay video này bằng sản phẩm của nhóm</h3>
-            <p>Ví dụ: video giới thiệu trường, phỏng vấn, hoạt động ngoại khóa hoặc trailer cho dự án. Phần này dùng thẻ <code>&lt;video&gt;</code> chuẩn của HTML.</p>
-            <div class="mini-tags">
-              <span>HTML5 Video</span><span>Responsive</span><span>GitHub Pages</span>
-            </div>
+          <div class="stage-index light-index">03</div>
+        </div>
+
+        <div class="activity-track">
+          <article class="activity-card" style="--i:0">
+            <div class="activity-no">01</div>
+            <div class="activity-icon">◉</div>
+            <h3>Học tập trên lớp</h3>
+            <p>Thực hành, thảo luận, khám phá và xây dựng kiến thức.</p>
+          </article>
+          <article class="activity-card" style="--i:1">
+            <div class="activity-no">02</div>
+            <div class="activity-icon">✦</div>
+            <h3>Câu lạc bộ</h3>
+            <p>Công nghệ, ngoại ngữ, nghệ thuật, thể thao và nhiều hoạt động sở thích.</p>
+          </article>
+          <article class="activity-card" style="--i:2">
+            <div class="activity-no">03</div>
+            <div class="activity-icon">⌁</div>
+            <h3>Sự kiện</h3>
+            <p>Ngày hội, cuộc thi, ngoại khóa và các hoạt động cộng đồng.</p>
+          </article>
+          <article class="activity-card" style="--i:3">
+            <div class="activity-no">04</div>
+            <div class="activity-icon">◆</div>
+            <h3>Dự án học sinh</h3>
+            <p>Website, video, infographic, nghiên cứu nhỏ và sản phẩm sáng tạo.</p>
+          </article>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div>HỌC TẬP • SÁNG TẠO • KẾT NỐI • TRẢI NGHIỆM • HỌC TẬP • SÁNG TẠO • KẾT NỐI •</div>
+      </div>
+    </section>
+
+    <section class="panel achievement-panel" id="achievements" data-section="Thành tích">
+      <div class="container achievement-layout">
+        <div class="achievement-copy reveal-left">
+          <p class="eyebrow dark">THÀNH TÍCH</p>
+          <h2>Những dấu ấn được tạo nên qua từng năm học.</h2>
+          <p class="muted">Các số liệu dưới đây là nội dung minh họa để học sinh học cách tạo counter animation.</p>
+        </div>
+        <div class="counter-grid">
+          <div class="counter-card reveal-scale">
+            <strong class="counter" data-count="24">0</strong><span>+</span>
+            <p>Dự án học sinh</p>
+          </div>
+          <div class="counter-card reveal-scale">
+            <strong class="counter" data-count="12">0</strong><span>+</span>
+            <p>Hoạt động tiêu biểu</p>
+          </div>
+          <div class="counter-card reveal-scale">
+            <strong class="counter" data-count="100">0</strong><span>%</span>
+            <p>Tinh thần sáng tạo</p>
+          </div>
+          <div class="counter-card reveal-scale">
+            <strong class="counter" data-count="365">0</strong><span></span>
+            <p>Ngày để tạo nên kỷ niệm</p>
           </div>
         </div>
+        <div class="stage-index">04</div>
       </div>
     </section>
 
-    <section class="section" id="student-task">
-      <div class="container assignment">
-        <div>
-          <p class="section-kicker">DÀNH CHO HỌC SINH</p>
-          <h2>Biến mẫu này thành website của nhóm</h2>
-          <p>
-            Mỗi nhóm hãy tạo một phiên bản riêng, thay đổi nội dung và triển khai
-            bằng GitHub Pages. Không cần dùng backend.
-          </p>
+    <section class="panel video-panel" id="video" data-section="Video">
+      <div class="container video-stage">
+        <div class="video-copy reveal-left">
+          <p class="eyebrow light">VIDEO GIỚI THIỆU</p>
+          <h2>Khi một section trở thành một khung phim.</h2>
+          <p>Upload <code>videos/school.mp4</code> để video phát trực tiếp trên website.</p>
+          <div class="mini-tags">
+            <span>HTML5 Video</span><span>GitHub Pages</span><span>Desktop Presentation</span>
+          </div>
         </div>
-
-        <ol class="task-list">
-          <li>Thay tên và nội dung giới thiệu.</li>
-          <li>Chọn bảng màu phù hợp với chủ đề.</li>
-          <li>Thêm ít nhất 4 hình ảnh.</li>
-          <li>Thêm một mục mới do nhóm tự thiết kế.</li>
-          <li>Đảm bảo website hiển thị tốt trên điện thoại.</li>
-          <li>Đưa website lên GitHub Pages và nộp đường dẫn.</li>
-        </ol>
+        <div class="video-shell reveal-scale">
+          <video id="schoolVideo" controls muted playsinline preload="metadata">
+            <source src="videos/school.mp4" type="video/mp4">
+          </video>
+          <div class="video-placeholder" id="videoPlaceholder">
+            <div class="play-mark">▶</div>
+            <strong>Chưa có video school.mp4</strong>
+            <span>Thêm video vào thư mục <code>videos/</code> để thay thế màn hình này.</span>
+          </div>
+        </div>
+        <div class="stage-index video-index">05</div>
       </div>
     </section>
 
-    <section class="section section-soft" id="contact">
-      <div class="container contact-card">
-        <div>
-          <p class="section-kicker">LIÊN HỆ</p>
-          <h2>Trường THPT Phú Nhuận</h2>
-          <p>
-            Đây là khu vực mẫu. Học sinh hãy cập nhật địa chỉ, email,
-            website chính thức hoặc thông tin liên hệ phù hợp với dự án.
-          </p>
+    <section class="panel contact-panel" id="contact" data-section="Liên hệ">
+      <div class="container contact-stage">
+        <div class="contact-big reveal-up">
+          <p class="eyebrow light">LIÊN HỆ</p>
+          <h2>Hẹn gặp bạn<br>ở Phú Nhuận.</h2>
         </div>
-        <a class="btn btn-primary" href="#home">Về đầu trang ↑</a>
+        <div class="contact-card reveal-up delay-2">
+          <p><strong>Trường THPT Phú Nhuận</strong></p>
+          <p>Địa chỉ: cập nhật thông tin chính thức tại đây.</p>
+          <p>Email: cập nhật email liên hệ tại đây.</p>
+          <p>Website: cập nhật website chính thức tại đây.</p>
+          <a class="btn btn-primary" href="#home">Về đầu trang ↑</a>
+        </div>
+        <div class="stage-index contact-index">06</div>
       </div>
     </section>
   </main>
-
-  <footer>
-    <div class="container footer-wrap">
-      <p>© <span id="year"></span> THPT Phú Nhuận · Website học tập mẫu</p>
-      <p>Thiết kế bằng HTML · CSS · JavaScript · GitHub Pages</p>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
