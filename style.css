@@ -9,7 +9,7 @@
   --white:#fff;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
 body{
   margin:0;
   font-family:"Be Vietnam Pro",system-ui,sans-serif;
