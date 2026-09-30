@@ -63,3 +63,66 @@ navLinks.forEach(link=>{
     target.scrollIntoView({behavior:"smooth",block:"start"});
   });
 });
+
+// Desktop section-by-section wheel navigation.
+let wheelLocked = false;
+let currentSectionIndex = 0;
+const desktopQuery = window.matchMedia("(min-width: 981px)");
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+const syncCurrentSection = () => {
+  let bestIndex = 0;
+  let bestDistance = Infinity;
+
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    const distance = Math.abs(rect.top - 72);
+    if (distance < bestDistance) {
+      bestDistance = distance;
+      bestIndex = index;
+    }
+  });
+
+  currentSectionIndex = bestIndex;
+};
+
+const goToSection = (index) => {
+  const clamped = Math.max(0, Math.min(sections.length - 1, index));
+  currentSectionIndex = clamped;
+
+  sections[clamped].scrollIntoView({
+    behavior: reducedMotionQuery.matches ? "auto" : "smooth",
+    block: "start"
+  });
+
+  wheelLocked = true;
+  window.setTimeout(() => {
+    wheelLocked = false;
+  }, reducedMotionQuery.matches ? 100 : 850);
+};
+
+window.addEventListener("wheel", (event) => {
+  if (!desktopQuery.matches) return;
+  if (wheelLocked) {
+    event.preventDefault();
+    return;
+  }
+
+  const target = event.target;
+  if (target.closest("video, input, textarea, select, [contenteditable='true']")) return;
+
+  if (Math.abs(event.deltaY) < 8) return;
+
+  syncCurrentSection();
+
+  if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+    event.preventDefault();
+    goToSection(currentSectionIndex + 1);
+  } else if (event.deltaY < 0 && currentSectionIndex > 0) {
+    event.preventDefault();
+    goToSection(currentSectionIndex - 1);
+  }
+}, { passive: false });
+
+window.addEventListener("resize", syncCurrentSection);
+window.addEventListener("load", syncCurrentSection);
