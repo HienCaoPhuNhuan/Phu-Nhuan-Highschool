@@ -36,6 +36,9 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-overlay"></div>
+      <span class="hero-orb orb-1"></span>
+      <span class="hero-orb orb-2"></span>
+      <span class="hero-orb orb-3"></span>
       <div class="container hero-content">
         <p class="eyebrow">WELCOME TO PHU NHUAN HIGH SCHOOL</p>
         <h1>Thanh xuân đợi tôi<br />ở Phú Nhuận</h1>
@@ -69,15 +72,15 @@
 
         <div class="info-card">
           <div class="stat">
-            <span class="stat-number">01</span>
+            <span class="stat-number counter" data-count="1" data-pad="2">00</span>
             <span>Website mẫu</span>
           </div>
           <div class="stat">
-            <span class="stat-number">03</span>
+            <span class="stat-number counter" data-count="3" data-pad="2">00</span>
             <span>Công nghệ: HTML · CSS · JS</span>
           </div>
           <div class="stat">
-            <span class="stat-number">100%</span>
+            <span class="stat-number counter" data-count="100" data-suffix="%">0%</span>
             <span>Chạy trực tiếp trên trình duyệt</span>
           </div>
         </div>
@@ -156,6 +159,33 @@
           <div class="gallery-box"><span>Hoạt động học tập</span></div>
           <div class="gallery-box"><span>Câu lạc bộ</span></div>
           <div class="gallery-box"><span>Sự kiện</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="container">
+        <p class="section-kicker">VIDEO GIỚI THIỆU</p>
+        <h2 class="section-title">Kể câu chuyện bằng hình ảnh chuyển động</h2>
+        <div class="video-layout">
+          <div class="video-shell">
+            <video id="schoolVideo" controls muted playsinline preload="metadata">
+              <source src="videos/school.mp4" type="video/mp4">
+              Trình duyệt của bạn không hỗ trợ video HTML5.
+            </video>
+            <div class="video-placeholder" id="videoPlaceholder">
+              <div class="play-mark">▶</div>
+              <strong>Chưa có video school.mp4</strong>
+              <span>Upload video vào thư mục <code>videos/</code> để phát trực tiếp trên GitHub Pages.</span>
+            </div>
+          </div>
+          <div class="video-copy">
+            <h3>Học sinh có thể thay video này bằng sản phẩm của nhóm</h3>
+            <p>Ví dụ: video giới thiệu trường, phỏng vấn, hoạt động ngoại khóa hoặc trailer cho dự án. Phần này dùng thẻ <code>&lt;video&gt;</code> chuẩn của HTML.</p>
+            <div class="mini-tags">
+              <span>HTML5 Video</span><span>Responsive</span><span>GitHub Pages</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
